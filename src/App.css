@@ -1,0 +1,134 @@
+body{
+  background-image: url('./bg.jpg');
+}
+.App {
+  text-align: center;
+}
+
+.container{
+  padding: 0px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header{
+  padding: 20px;
+}
+.header-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-title1{
+  display: block;
+  color: #639e13;
+  font-size: 56px;
+  margin-bottom: -24px;
+  margin-top: -14px;
+}
+
+.header-title2{
+  color: #8cc53f;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+.navbar-light .navbar-brand{
+  color:#639e13;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color:#8cc53f;
+}
+
+.btn-outline-success{
+  background-color:#639e13;
+  color: #ffffff;
+}
+
+.form-inline .form-control{
+  border: #639e13 1px solid;
+}
+
+.contact-details{
+  text-align: center;
+}
+
+.copy-right{
+  text-align: center;
+  padding-top:20px;
+}
+
+.shopping-cart{
+  height: 50px;
+  background-image: url('./shoppincart.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-left: 90px;
+}
+.shopping-cart-count{
+  margin-top: -14px;
+  float: left;
+  margin-left: 38px;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 1px #666;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.product{
+  cursor: pointer;
+  min-width:240px;
+  max-width:240px;
+  margin: 20px;
+}
+
+.products-container{
+  padding: 20px;
+}
+
+.card-title{
+  text-align: center;
+  color: #639e13;
+}
+
+.card-text{
+  color: #333;
+}
+
+.product-price{
+  text-align: right;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.footer-links{
+  border-top:solid 1px #eee;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.nav-link{
+  color: #3d4246;
+}
+
+.social-icon{
+  margin: 46px 0px ;
+}
+
+.social-icon-img{
+  width:36px;
+}
+
+.subscription-text{
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.subscription-button{
+  background-color: #639e13;
+  color: #ffffff;
+}
