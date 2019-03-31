@@ -5,6 +5,8 @@ import Product from "./Product";
 import ProductItems from "../ProductItems";
 import axios from "axios";
 import { connect } from "react-redux";
+import { firestoreConnect } from "react-redux-firebase";
+import { compose } from "redux";
 
 class ProductList extends React.Component{
     constructor(props)
@@ -29,23 +31,37 @@ class ProductList extends React.Component{
     }
     render(){
         console.log(this.props);
-        var productListDisplay=this.state.ProductItems.map((item)=>{
+        if(this.state.ProductItems && this.state.ProductItems.length > 0 ){
+            var productListDisplay=this.state.ProductItems.map((item)=>{
+                return(
+                    <Product product={item} onAddCart={this.shoppingCartAddEventHandler}/>
+                );
+            })
             return(
-                <Product product={item} onAddCart={this.shoppingCartAddEventHandler}/>
+                <Row className="justify-content-md-center products-container">
+                    {productListDisplay}
+                </Row>
             );
-        })
-        return(
-            <Row className="justify-content-md-center products-container">
-                {productListDisplay}
-            </Row>
-        );
+        }else{
+            return(
+                <Row className="justify-content-md-center products-container">
+                </Row>
+            );
+        }
     }
 }
 
 const mapStateToProps=(state)=>{
+    console.log("#############");
+    console.log(state);
     return{
-        product: state.product.products
+        product: state.firestore.ordered.products
     }
 }
 
-export default connect(mapStateToProps)(ProductList)
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'products' }
+    ])
+)(ProductList)
