@@ -44,19 +44,16 @@ class Product extends React.Component{
                     </Card.Body>
                 </Card>
                 {this.state.showProductDetails && 
-                    <ReactModal  
-                                    
+                    <ReactModal                                      
                         shouldCloseOnOverlayClick={true}
                         shouldCloseOnEsc={true} 
                         isOpen={this.state.showProductDetails}
                         onRequestClose={this.backEventHandler}
                         overlaystyle="ReactModal__Overlay"
                         style={{
-                            
                             content: {
-                                backgroundColor: 'white',
                                 color: 'black',
-                                padding:'0px'
+                                padding:'0px',
                             }
                         }} >
                         <ProductDetails productObj={product} onBack={this.backEventHandler} sendDataFromPdToP={this.addToCartEventHandler}/>

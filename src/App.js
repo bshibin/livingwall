@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 import Header from "./components/header/Header";
-import ProductList from "./components/products/ProductList";
+import Products from "./components/products/index";
 import Footer from "./components/footer/index";
 
 class App extends Component {
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <Container>
           <Header cart={this.state.cart} onClearCart={this.clearCart}/>
-          <ProductList onShoppingCart={this.addToCartEventHandler}/>
+          <Products onShoppingCart={this.addToCartEventHandler}/>
           <Footer/>
       </Container>
     );

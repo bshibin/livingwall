@@ -132,3 +132,11 @@ body{
   background-color: #639e13;
   color: #ffffff;
 }
+
+.product-container{
+  margin: 30px;
+}
+
+.product-details .col img{
+  width: 300px;
+}

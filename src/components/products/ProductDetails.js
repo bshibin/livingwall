@@ -26,10 +26,14 @@ class ProductDetails extends React.Component{
     render(){
         var product = this.props.productObj;
         return(
-            <div class="container">
-                <Row>
+            <div className="product-container">
+                <Row className="product-details">
                     <Col>
                         <img src={product.imageUrl}/>
+                    </Col>
+                    <Col>
+                        {product.productName}
+                        {product.shortDescription}
                     </Col>
                 </Row>
                 <Row>
