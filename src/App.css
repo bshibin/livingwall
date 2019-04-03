@@ -34,6 +34,10 @@ body{
   margin-top: 0px;
 }
 
+.carousel{
+  z-index: 0 !important;
+}
+
 .navbar-light .navbar-brand{
   color:#639e13;
 }
@@ -131,12 +135,31 @@ body{
 .subscription-button{
   background-color: #639e13;
   color: #ffffff;
+  z-index: auto !important;
 }
 
 .product-container{
   margin: 30px;
 }
+.product-details{
+  text-align: justify;
+}
 
-.product-details .col img{
-  width: 300px;
+.product-details .product-image{
+  width: 100%;
+}
+
+.product-details .btn-toolbar button {
+  margin: 4px;
+}
+
+.product-details .product-price{
+  padding: 20px 15px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.product-details .product-buttons{
+  padding: 20px;
 }

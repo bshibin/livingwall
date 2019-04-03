@@ -12,15 +12,16 @@ import { compose } from "redux";
 
 class Index extends React.Component{
     shoppingCartAddEventHandler=(obj)=>{
-        console.log(" product list - shoppingCartChangeEvent");
-        console.log(obj);
         this.props.onShoppingCart(obj);
     }
     render(){
-        const { products } = this.props;
+        const { products, category } = this.props;
+        console.log("category={category}");
+        console.log(category);
+        console.log("category={category}");
         return(
             <Row className="justify-content-md-center products-container">
-                <ProductList products={products} />
+                <ProductList products={products} category={category}/>
             </Row>
         );
     }

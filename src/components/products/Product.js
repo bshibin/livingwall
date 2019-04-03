@@ -45,14 +45,13 @@ class Product extends React.Component{
                 </Card>
                 {this.state.showProductDetails && 
                     <ReactModal                                      
-                        shouldCloseOnOverlayClick={true}
-                        shouldCloseOnEsc={true} 
-                        isOpen={this.state.showProductDetails}
-                        onRequestClose={this.backEventHandler}
-                        overlaystyle="ReactModal__Overlay"
+                        shouldCloseOnOverlayClick = {true}
+                        shouldCloseOnEsc = {true} 
+                        isOpen = {this.state.showProductDetails}
+                        onRequestClose = {this.backEventHandler}
+                        overlaystyle = "ReactModal__Overlay"
                         style={{
                             content: {
-                                color: 'black',
                                 padding:'0px',
                             }
                         }} >

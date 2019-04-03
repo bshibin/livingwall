@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+
 class QuantityManage extends React.Component {
     constructor(props)
         {
@@ -41,10 +43,10 @@ class QuantityManage extends React.Component {
         
         return (
             <React.Fragment>
-            <input type="button" value="-" onClick={this.clickHandler.bind(this,"minus")} />
-             { this.state.qty }
-            <input type="button" value="+" onClick={this.clickHandler.bind(this,"plus")}/>
-        </React.Fragment>
+                <Button variant="outline-info" onClick={this.clickHandler.bind(this,"minus")}>-</Button>
+                <Button variant="outline-info">{ this.state.qty }</Button>
+                <Button variant="outline-info" onClick={this.clickHandler.bind(this,"plus")}>+</Button>
+            </React.Fragment>
         );
     }
 }

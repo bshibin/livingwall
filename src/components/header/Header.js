@@ -24,8 +24,8 @@ class Header extends React.Component
                 <Row className="header">
                     <Col sm={2}><img src="logo.png"/></Col>
                     <Col sm={8} className="header-title">
-                        <span className="header-title1">Shopping Cart</span>
-                        <span className="header-title2">Your Favourite Shop</span>
+                        <span className="header-title1">Living Wall</span>
+                        <span className="header-title2">Love The Nature</span>
                         {this.props.qty}
                     </Col>
                     <Col sm={2}><Cart cart={this.props.cart} clearCart={this.clearCart} /></Col>
