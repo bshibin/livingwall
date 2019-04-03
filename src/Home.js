@@ -28,11 +28,7 @@ class Home extends Component {
     this.setState({cart:[]});
   }
   render() {
-    //const category = this.props.match.params.category;
     const category = this.props.match.params.category? this.props.match.params.category : "all";
-    console.log(" ------ this.props Home ------ ");
-    console.log(category);
-    console.log(" ------ this.props Home ------ ");
     return (
       <Container>
           <Header cart={this.state.cart} onClearCart={this.clearCart}/>
